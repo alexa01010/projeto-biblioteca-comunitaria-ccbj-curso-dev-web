@@ -1,0 +1,268 @@
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    z-index: -1;
+}
+.form-group{ 
+    margin-bottom: 15px;
+    color: #f0ebeb;
+
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(45, 37, 151);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4b1313;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: rgb(39, 10, 10);
+}
+
+#formMessage{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.header-main{
+    background-color: #300d0d;
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    
+}
+
+header{
+    background-color: #291313;
+    color: #fff;
+    padding: 20px 0;
+    background-repeat: unset; display: flex;
+    justify-content: center;
+}
+
+h2, p{
+    color: #ccc;
+    font-size: medium;
+}
+
+@keyframes typing{
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink{
+    0% { border-right: 2px solid transparent; }
+    100% { border-right: 2px solid black; }
+}
+
+h1{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+    display: flex;
+    justify-content: center;
+}
+
+
+header nav{
+    float: right;
+
+}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline;
+    margin-left: 10px;
+}
+
+header nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;  
+}
+
+.book-details{
+    color: #c2b9b9;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #180404;
+    display: flex;
+    align-items: center;
+
+}
+
+.book-details img{
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.book-details h1{
+    margin-top: 0;
+    text-wrap: wrap;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+#container-book-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.btn-voltar{
+    background-color: rgb(72, 14, 14);
+    color: #f7f5f5;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 8px;
+    
+}
+
+  
+.btn-voltar:hover{
+    background-color: #180404;
+    box-shadow: 0 4px 8px rgb(54, 6, 6);
+}
+
+
+.btn-voltar:active{
+    transition: scale(1.95);
+    box-shadow: 0 2px 4px rgba(139, 83, 83, 0.2);
+}
+
+
+
+main{
+    padding: 20px 0;
+
+}
+
+.book-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    overflow: hidden;
+    
+}
+
+
+.book { 
+    color: #c2b9b9;
+    background: #000000;
+    padding: 10px;
+    border: 1px solid #343131;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #5f1717;
+    color: #ccc;
+    border: #300d0d;
+}
+.flex{
+    display: flex;
+    gap: 15px;
+}
+
+.book img{
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border: #ccc;
+    border-radius: 10px;
+
+}
+
+
+footer{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-family: "Anton SC", sans-serif;
+
+}
+
+@media screen and (max-width: 900px ) {
+    .book-list {
+        grid-template-columns: 1fr;
+    }
+
+    .book-details {
+        flex-direction: column;
+    }
+
+    .book-details img {
+        margin-bottom: 25px;
+    }
+    
+    .flex {
+        margin: 0px 20px;
+    }
+}
